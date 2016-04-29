@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+ <title>G-Review</title> 
+
+ <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+
+ <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />-->
+ <link rel="stylesheet" href="themes/theme.css" /><!--Theme Roller-->
+ <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+ 
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body> 
+ <div data-role="page" id="home" data-theme="a"><!--start of page home-->
+    <div id="leftpanel1" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate ui-panel-open" data-display="reveal" data-position="left" data-role="panel"><!--Panel widget with a nested listview-->
+    <div class="ui-panel-inner">
+       <ul data-role="listview" data-inset="false" data-icon="false">
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user" href="#">Sign IN / Register</a></li>
+       </ul>
+       <h3>G-Review</h3>
+       <ul data-role="listview" data-inset="false" data-icon="false">  
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" href="#productlist">Games</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit" href="#reviewlist">Reviews</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-plus" href="#">Genres</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-lock" href="#href" data-transition="slideup">Administrator</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-comment" href="#href" data-transition="slideup">Add Review</a></li>
+       </ul>
+    </div>
+    </div><!--/leftpanel1 -->
+    <div data-role="header" data-position="fixed">
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" href="#leftpanel1">Nav</a><!--Button for reavealing panel with navbars-->
+      <h1>G-Review</h1>
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search" href="#">Search</a> 
+    </div><!-- /header -->
+
+
+    <div data-role="content"><!--Home page still needs work-->    
+      <div data-role="tabs" id="tabs">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#one" data-ajax="false">Latest Reviews</a></li>
+            <li><a href="#two" data-ajax="false">Latest Games</a></li>
+            <li><a href="ajax-content.html" data-ajax="false">three</a></li>
+          </ul>
+        </div>
+      <div id="one">
+        <div class="ui-grid-a">
+         <div class="ui-block-a ui-body ui-body-a"><!--group grid with tab-->
+          <div class="ui-bar ui-bar-a" style="height:200px">
+            <img src="images/GTA-V-Heists.png" width="100%" height="200px"></img>
+          </div>
+         </div>
+         <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:200px">
+          <h1>Catch Our Latest Reviews</h1>
+          </div>
+         </div>
+        </div><!-- /grid-a -->
+      </div>
+        <div id="two">
+          <ul data-role="listview" data-inset="true">
+              <li><a href="#">Acura</a></li>
+              <li><a href="#">Audi</a></li>
+              <li><a href="#">BMW</a></li>
+              <li><a href="#">Cadillac</a></li>
+              <li><a href="#">Ferrari</a></li>
+          </ul>
+        </div><!--two-->
+     </div><!--/tabs-->  
+   </div><!-- /content -->
+   <div data-id="foot1" data-role="footer" data-position="fixed" ><!--start of footer-->
+      <div data-role="navbar">
+        <ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">User Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+       </div><!-- /navbar -->
+      <h4 style="text-align:center;">Copyright 2013-2014, G-Review Entertainment, INC.</h4>
+    </div><!-- /footer -->
+ </div><!-- /page home-->
+ 
+ <div data-role="page" id="productlist" data-theme="a" data-rel="back"><!-- Start of Product list page-->
+    <div id="leftpanel1" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate ui-panel-open" data-display="reveal" data-position="left" data-role="panel">
+    <div class="ui-panel-inner">
+       <ul data-role="listview" data-inset="false" data-icon="false">
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user" href="#">Sign IN / Register</a></li>
+       </ul>
+       <h3>G-Review</h3>
+       <ul data-role="listview" data-inset="false" data-icon="false">  
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" href="#productlist">Games</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit" href="#reviewlist">Reviews</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-plus" href="#">Genres</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-lock" href="#href" data-transition="slideup">Administrator</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-comment" href="#href" data-transition="slideup">Add Review</a></li>
+       </ul>
+    </div>
+    </div><!--/leftpanel1 -->
+      
+    <div data-role="header" data-position="fixed"><!--start of header-->
+           <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" href="#leftpanel1">Nav</a><!--Button for reavealing panel with navbars-->
+           <h1>G-Review</h1>
+           <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search" href="#">Search</a> 
+     </div><!-- /header -->
+     <div role="main" class="ui-content">
+	 <table data-role="table" id="phone-table" data-mode="false"  data-column-btn-theme="a" class="product-display1" ui-shadow table-stroke"><!--Start of table-->
+            <thead>
+              <tr class="ui-bar-d">
+                <th></th><!--Made two columns one for game description and one for game thumbnail-->
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+             <th class="label">
+               <a href="#productdisplay">Grand Theft Auto: V</a>
+               <h4>developer: Rockstar Games</h4>
+             </th>
+               <th><a href=#productdisplay></a><img src="images/GTAV.jpg" width="100px" height="150px"></img></th>
+             </tbody>
+            <tbody>
+             <th class="label">
+               <a href=#>Fifa 14</a>
+               <h4>developer: EA Sports</h4>
+             </th>
+             <th><a href=#><img src="images/Fifa14case.jpg" width="100px" height="150px"></img></a></th>
+             </tbody>
+         </table>
+     </div><!-- /content -->
+ <div data-id="foot1" data-role="footer" data-position="fixed" >
+      <div data-role="navbar">
+        <ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">User Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+       </div><!-- /navbar -->
+      <h4 style="text-align:center;">Copyright 2013-2014, G-Review Entertainment, INC.</h4>
+     </div>
+ </div><!--/End of product list page -->
+ <div data-role="page" id="productdisplay" data-theme="a" data-rel="back"><!--start of page Product display-->
+    <div id="leftpanel1" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate ui-panel-open" data-display="reveal" data-position="left" data-role="panel">
+    <div class="ui-panel-inner">
+       <ul data-role="listview" data-inset="false" data-icon="false">
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user" href="#">Sign IN / Register</a></li>
+       </ul>
+       <h3>G-Review</h3>
+       <ul data-role="listview" data-inset="false" data-icon="false">  
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" href="#productlist">Games</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit" href="#reviewlist">Reviews</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-plus" href="#">Genres</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-lock" href="#href" data-transition="slideup">Administrator</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-comment" href="#href" data-transition="slideup">Add Review</a></li>
+       </ul>
+    </div>
+    </div><!--/leftpanel1 -->
+    <div data-role="header" data-position="fixed">
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" href="#leftpanel1">Nav</a><!--Button for reavealing panel with navbars-->
+      <h1>G-Review</h1>
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search" href="#">Search</a> 
+    </div><!-- /header-->
+    
+    <div data-role="content" ><!--start of content-->    
+      <table data-role="table" id="phone-table" data-mode="false" class="product-display1" ui-shadow table-stroke">
+       <thead>
+        <tr>
+           <th class="label"></th> 
+           <th class="label"></th>
+           <th class="label"></th>
+        </tr>
+        </thead>
+      <tbody>
+        <tr class="photos">
+          <th class="image"><img src="images/GTAV.jpg" width="100px" height="150px"></th>
+          <th class="label">
+           <h2>Grand Theft Auto: V</h2>
+           <h4>Genre: Action</h4>
+           </th>
+          <th class="label"><h3>Gamer Score: 9.0</h3>
+           <form>
+             <label for="slider-10">Ratings:</label>
+             <input name="slider-10" id="slider-10" min="0" max="10" step=".1" value="5" type="range">
+           </form>
+          </th>
+        </tr>
+      </tbody>
+      </table>
+      <table data-role="table" id="review-table" data-mode="false"  data-column-btn-theme="a" class="product-display1" ui-shadow table-stroke">
+       <thead>
+        <tr>
+           <th class="label"></th> 
+        </tr>
+        </thead>
+      <tbody>
+        <tr class="About" >
+          <th class="label"><a href="#reviewpage" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-left">Review</a></th> 
+        </tr>
+      </tbody>
+      </table>
+      <table data-role="table" id="review-table" data-mode="false"  data-column-btn-theme="a" class="product-display1" ui-shadow table-stroke">
+       <thead>
+        <tr>
+           <th class="label">About</th> 
+        </tr>
+        </thead>
+      <tbody>
+        <tr class="About">
+          <th class="label">
+            <P>Introduced with the release of Grand Theft Auto 5, Grand Theft Auto Online is a dynamic, persistent open world for 16 players. Taking the fundamental concepts of open-world freedom, ambient activity and mission-based gameplay of the Grand Theft Auto series and making them available to multiple players in an incredibly dynamic online world, GTA Online offers the freedom to explore alone or work cooperatively with friends to complete missions.
+               You start by creating and developing a unique character from the ground up and can invest in your potential criminal by customizing his or her appearance, improving their stats, owning customized vehicles, purchasing personal property, and taking part in Jobs, Missions and activities that continually open up new opportunities to rise through the criminal ranks.
+               Grand Theft Auto Online is designed to continually expand and evolve over time with a constant stream of new content, creating the first ever persistent and dynamic GTA game world.
+            </P>
+            <h4>Platform: Playstation 3</h4>
+            <h4>Developer: Rockstar Games</h4>
+            <h4>Publisher: Rockstar North</h4>
+            <h4>Release Date: 16th September 2013</h4>
+          </th>
+        </tr>
+      </tbody>
+      </table>
+
+    </div><!-- /content --> 
+    
+    <div data-id="foot1" data-role="footer" data-position="fixed" ><!--start of footer-->
+      <div data-role="navbar">
+        <ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">User Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+       </div><!-- /navbar -->
+      <h4 style="text-align:center;">Copyright 2013-2014, G-Review Entertainment, INC.</h4>
+    </div><!-- /footer -->
+ </div><!-- /End of product display page-->     
+ <div data-role="page" id="reviewlist" data-theme="a"><!--start of page reviewlist-->
+    <div id="leftpanel1" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate ui-panel-open" data-display="reveal" data-position="left" data-role="panel">
+    <div class="ui-panel-inner">
+       <ul data-role="listview" data-inset="false" data-icon="false">
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user" href="#">Sign IN / Register</a></li>
+       </ul>
+       <h3>G-Review</h3>
+       <ul data-role="listview" data-inset="false" data-icon="false">  
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" href="#productlist">Games</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit" href="#reviewlist">Reviews</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-plus" href="#">Genres</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-lock" href="#href" data-transition="slideup">Administrator</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-comment" href="#href" data-transition="slideup">Add Review</a></li>
+       </ul>
+    </div>
+    </div><!--/leftpanel1 -->
+    <div data-role="header" data-position="fixed">
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" href="#leftpanel1">Nav</a><!--Button for reavealing panel with navbars-->
+      <h1>G-Review</h1>
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search" href="#">Search</a> 
+    </div><!-- /header -->
+
+
+    <div data-role="content"><!--start of content-->    
+     <table data-role="table" id="phone-table" data-mode="false" data-column-btn-theme="a" class="product-display1" ui-shadow table-stroke">
+       <thead>
+        <tr>
+           <th class="label"></th>
+           <th class="label"></th> 
+        </tr>
+        </thead>
+      <tbody>
+        <tr class="About">
+          <th class="label">
+            <a href="#reviewpage">Grand Theft Auto: V</a>
+            <h4>Review</h4>
+          </th>
+          <th class="label">
+            <a href="#reviewpage"><img src="images/GTAV.jpg" width="100px" height="130px"</a>
+          </th>
+        </tr>
+        <tr class="About">
+          <th class="label">
+            <a href="#">Fifa 14</a>
+            <h4>Review</h4>
+          </th>
+          <th class="label">
+            <a href="#"><img src="images/Fifa14case.jpg" width="100px" height="130px"></a>
+          </th>
+        </tr>
+      </tbody>
+      </table> 
+    </div><!-- /content -->
+    <div data-id="foot1" data-role="footer" data-position="fixed" ><!--start of footer-->
+      <div data-role="navbar">
+        <ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">User Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+       </div><!-- /navbar -->
+      <h4 style="text-align:center;">Copyright 2013-2014, G-Review Entertainment, INC.</h4>
+    </div><!-- /footer -->
+ </div><!-- /page reviewlist-->  
+ <div data-role="page" id="reviewpage" data-theme="a" data-rel="back"><!--start of reviewpage-->
+    <div id="leftpanel1" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-a ui-panel-animate ui-panel-open" data-display="reveal" data-position="left" data-role="panel">
+    <div class="ui-panel-inner">
+       <ul data-role="listview" data-inset="false" data-icon="false">
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-user" href="#">Sign IN / Register</a></li>
+       </ul>
+       <h3>G-Review</h3>
+       <ul data-role="listview" data-inset="false" data-icon="false">  
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-star" href="#productlist">Games</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit" href="#reviewlist">Reviews</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-plus" href="#">Genres</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-lock" href="#href" data-transition="slideup">Administrator</a></li>
+          <li><a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-comment" href="#href" data-transition="slideup">Add Review</a></li>
+       </ul>
+    </div>
+    </div><!--/leftpanel1 -->
+    <div data-role="header" data-position="fixed">
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars" href="#leftpanel1">Nav</a><!--Button for reavealing panel with navbars-->
+      <h1>G-Review</h1>
+      <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-search" href="#">Search</a> 
+    </div><!-- /header -->
+    <div data-role="content"><!--start of content-->
+    <div class="rwd-example"><!--This class is composed of three different grids/blocks: It has also being styled using a custom css-->
+        <div class="ui-block-a">
+          <div class="ui-body ui-body-d"><!--Grid for images-->
+             <img src="images/GTA-V-Heists.png" width="100%" height="300px"> 
+          </div>
+        </div>
+        <div class="ui-block-b"><!--Grid for Title and review-->
+        <div class="ui-body ui-body-d">
+            <h1>Grand Theft Auto: V Review</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mi sed diam tristique facilisis. Ut condimentum est urna, id dictum elit venenatis ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque vitae purus eleifend, posuere erat at, viverra odio. Proin aliquam lacinia erat id blandit. Maecenas placerat egestas orci, in tempus est elementum in. Sed id tristique metus, quis consequat dolor. Donec commodo magna in risus hendrerit tempus. Proin in sapien ipsum. Nunc eu dolor in leo iaculis sollicitudin vitae in turpis. Nunc nec eros sagittis, semper arcu nec, venenatis elit. Nulla volutpat, quam at imperdiet euismod, augue lacus cursus mauris, quis pretium purus augue non nisi. Nunc at euismod metus, sed pharetra justo. Maecenas eu fermentum turpis. Nulla aliquam ultricies purus ac varius.
+              Mauris sagittis sapien augue, gravida blandit lorem tempus a. Quisque nec vestibulum nulla. Praesent porttitor luctus venenatis. Ut adipiscing, nunc eget imperdiet pharetra, est risus vehicula nisl, nec blandit lectus orci ut tellus. Etiam ultrices dolor non odio tincidunt, at suscipit metus ultricies. Mauris eget libero vitae augue elementum aliquam eu id odio. Pellentesque porttitor tellus a diam rutrum ultrices. Aenean a sollicitudin nibh. Vestibulum quis ligula sed ipsum facilisis accumsan. Quisque euismod suscipit lorem non vehicula. Proin sed elit non sapien porta porttitor. Vestibulum consectetur massa non augue egestas, nec faucibus mauris feugiat. Nam porttitor justo imperdiet augue dictum, vitae vehicula justo varius. Aliquam gravida elit enim, eget interdum sapien condimentum sit amet. Maecenas vehicula, ipsum et mattis lobortis, tortor quam tristique justo, eu pharetra justo nulla et mi. Aliquam placerat fermentum fermentum. 
+            </p>
+        </div>
+        </div><!--/grid-->
+        <div class="ui-block-solo"><!--Grid for rating-->
+          <div class="ui-body ui-body-d">
+             <h2>Rating: 5</h2>
+             <h2>Review Date: 15th January 2014</h2>
+             <h2>Reviewed By: John Doe</h2>
+             <h2>Game Title: Grand Theft Auto V</h2>
+          </div><!--/grid-->
+        </div>
+    </div><!--/rwd-example-->
+    </div><!--/content -->
+    <div data-id="foot1" data-role="footer" data-position="fixed" ><!--start of footer-->
+      <div data-role="navbar">
+        <ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">User Agreement</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+       </div><!-- /navbar -->
+      <h4 style="text-align:center;">Copyright 2013-2014, G-Review Entertainment, INC.</h4>
+    </div><!-- /footer -->
+ </div><!-- /page -->
+</body>
+</html>
+
